@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMDB movies</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="movies row">
+        <div class="movies-left col-3 gx-0 mt-4">
+          <form class="form js-form-filter p-4 mb-4 bg-light" action="https://echo.htmlacademy.ru" method="POST">
+            <input class="form-control js-search-input mb-3" type="text" placeholder="Enter movie name" aria-label="Enter movie name">
+            <!-- <input class="form-control js-rating-input mb-3" type="text" placeholder="Enter movie raiting" aria-label="Enter movie raiting">
+            <select class="js-movie-category form-select mb-3" name="movie-category"></select> -->
+            <!-- <select class="js-movie-sort form-select mb-3" name="movie-sort">
+              <option value="az">A-Z</option>
+              <option value="za">Z-A</option>
+              <option value="high">Highest(raiting)</option>
+              <option value="low">Lowest(raiting)</option>
+              <option value="new">New to old</option>
+              <option value="old">Old to new</option>
+            </select> -->
+            <button class="btn btn-primary w-100" >Filter</button>
+          </form>
+
+          <div class="movies-bookmarks bg-light p-3">
+            <h3 class="text-center h4 text-danger">Bookmarked movies</h3>
+            <ul class="bookmarks-list"></ul>
+          </div>
+        </div>
+        <div class="movies-right col-9 gx-0">
+          <h2 class="header h1 text-center text-primary py-3">Movies</h2>
+          <ul class="movies-list js-movies-list d-flex justify-content-around flex-wrap list-unstyled p-0">
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <template id="card-template">
+    <li class="movie-card bg-light pb-2 mb-3" style="width: 18rem;">
+      <img class="movie-poster" src="https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg" class="card-img-top" alt="...">
+      <div class="movie-body p-2">
+        <h5 class="movie-title">Guardians of the Galaxy Vol. 2</h5>
+          <p class="mb-1">
+            <i class="fa-solid fa-calendar text-success me-2"></i>
+            <span class="movie-year">2017</span>
+          </p>
+          <p class="text-primary fw-bold ">
+            Type: 
+            <span class="text-black type fw-normal me-2">movie</span>
+          </p>
+        <!-- <p class="category fw-bold">
+          Genres: 
+          <span class="text-success fw-normal">Action, Adventure, Comedy</span>
+        </p> -->
+          <button class="btn btn-success js-bookmark-btn">Bookmark</button>
+      </div>
+    </li>
+  </template>
+
+    <!-- Modal -->
+    <!-- <template id="modal-template">
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Guardians of the Galaxy Vol. 2</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p class="fs-5 fw-bold text-success m-0">Summary:</p>
+              <p class="movie-plot">The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father the ambitious celestial being Ego.</p>
+              <p class="text-success fw-bold">Actors: <span class="movie-actors text-black fw-normal">Chris Pratt, Zoe Saldana, Dave Bautista</span></p>
+              <p class="text-success fw-bold">Runtime: <span class="movie-runtime text-black fw-normal">136 min</span></p>
+              <p class="text-success fw-bold">Released: <span class="movie-released text-black fw-normal">05 May 2017</span></p>
+              <p class="text-success fw-bold">Director: <span class="movie-director text-black fw-normal">James Gunn</span></p>
+              <p class="text-success fw-bold">Writer: <span class="movie-writer text-black fw-normal">James Gunn, Dan Abnett, Andy Lanning</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template> -->
+
+<script src="./bootstrap/js/bootstrap.bundle.js"></script>
+<script src="./js/utilts.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

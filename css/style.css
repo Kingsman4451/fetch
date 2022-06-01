@@ -1,0 +1,16 @@
+.form {
+  border-radius: 15px;
+  box-shadow: -8px 10px 14px 3px rgba(34, 60, 80, 0.2);
+}
+
+.movies-bookmarks {
+  height: 350px;
+  border-radius: 15px;
+  box-shadow: -8px 10px 14px 3px rgba(34, 60, 80, 0.2);
+}
+
+.movie-card {
+  border-radius: 10px;
+  box-shadow: -8px 10px 14px 3px rgba(34, 60, 80, 0.2);
+  overflow: hidden;
+}
